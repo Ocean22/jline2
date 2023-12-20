@@ -2020,7 +2020,7 @@ public class ConsoleReader implements Closeable
      */
     public String accept() throws IOException {
         moveToEnd();
-        if (buf.lenght() != 0) {
+        if (buf.length() != 0) {
             println(); // output newline
         }
         flush();
