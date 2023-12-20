@@ -43,7 +43,7 @@ public class CursorBuffer
     }
 
     public int length() {
-        return buffer.length();
+        return new StringBuilder(buffer.toString().trim()).length();
     }
 
     public char nextChar() {
