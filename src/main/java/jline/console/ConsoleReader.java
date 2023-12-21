@@ -912,13 +912,13 @@ public class ConsoleReader implements Closeable
      */
     public void putString(final CharSequence str) throws IOException {
         int pos = getCursorPosition();
-        buf.write(str);
         if (mask == null) {
             // no masking
             fmtPrint(str, pos);
         } else if (mask == NULL_MASK) {
             // don't print anything
         } else {
+            buf.write(str);
             rawPrint(mask, str.length());
         }
         drawBuffer();
